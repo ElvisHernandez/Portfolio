@@ -1,1 +1,0 @@
-export { default as faviconPng } from './images/favicon.png'
