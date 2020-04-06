@@ -1,28 +1,29 @@
-import React, { useState ,useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import styles from './Home.module.css'
 
 const Home = () => {
-    // const homeRef = useRef(null)
-    // const animationContainer = document.getElementById('animation-container')
 
     useEffect(() => {
-        // if(!homeRef.current) return
+        let animation = document.getElementById('particles-js')
+        if(!animation) {
+            animation = document.createElement('section')
+            animation.id = 'particles-js'
+            document.body.appendChild(animation)
+        }
+        console.log('this is my console.log',document.getElementById('particles-js'))
         const appScript = document.createElement('script')
         const particlesScript = document.createElement('script')
         appScript.src = './particles.js'
         particlesScript.src = './app.js'
-        // appScript.async = true
-        // particlesScript.async = true
+
         const animationContainer = document.getElementById('animation-container')
         animationContainer.appendChild(appScript)
         animationContainer.appendChild(particlesScript)
 
         return () => {
-            
-            // animationContainer.removeChild(appScript)
-            // animationContainer.removeChild(particlesScript)
+            // const animation = document.getElementById('particles-js')
 
-            document.body.removeChild(animationContainer)
+            document.body.removeChild(animation)
         }
     },[])
 
