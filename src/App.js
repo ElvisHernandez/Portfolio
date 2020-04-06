@@ -1,5 +1,8 @@
 import React from 'react'
 import Nav from './components/Nav'
+import Home from './pages/Home'
+import About from './pages/About'
+import Projects from './pages/Projects'
 import { 
   BrowserRouter as Router,
   Switch,
@@ -10,8 +13,11 @@ function App() {
   return (
       <Router>
         <Nav />
-        <h1>Hello World!</h1>
-        <h2>Testing Netlify continuos deployment</h2>
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/about' component={About} />
+          <Route exact path='/projects' component={Projects} />
+        </Switch>
       </Router>
   );
 }
