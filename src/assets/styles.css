@@ -1,5 +1,11 @@
+
+body {
+    color:red
+}
+
+
 #particles-js {
     height: 500px;
-    width: 100vw;
+    width: 50vw;
     background: #23153C;
 }
