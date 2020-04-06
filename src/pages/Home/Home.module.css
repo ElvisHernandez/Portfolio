@@ -5,7 +5,12 @@
 }
 
 .particlesJs {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+    color: white;
     height: 500px;
-    width: 50vw;
+    width: 100vw;
     background: #23153C;
 }
