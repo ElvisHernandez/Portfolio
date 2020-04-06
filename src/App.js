@@ -1,13 +1,11 @@
 import React from 'react'
-import Nav from './components/Nav'
-import Home from './pages/Home'
-import About from './pages/About'
-import Projects from './pages/Projects'
+import { Nav } from './components'
 import { 
   BrowserRouter as Router,
   Switch,
   Route
 } from 'react-router-dom'
+import { Home, About, Projects } from './pages'
 
 function App() {
   return (
