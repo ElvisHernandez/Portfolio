@@ -3,23 +3,26 @@ import styles from './Home.module.css'
 
 const Home = () => {
     // const homeRef = useRef(null)
+    // const animationContainer = document.getElementById('animation-container')
 
     useEffect(() => {
         // if(!homeRef.current) return
-
         const appScript = document.createElement('script')
         const particlesScript = document.createElement('script')
         appScript.src = './particles.js'
         particlesScript.src = './app.js'
-        appScript.async = true
-        particlesScript.async = true
-
-        document.body.appendChild(appScript)
-        document.body.appendChild(particlesScript)
+        // appScript.async = true
+        // particlesScript.async = true
+        const animationContainer = document.getElementById('animation-container')
+        animationContainer.appendChild(appScript)
+        animationContainer.appendChild(particlesScript)
 
         return () => {
-            document.body.removeChild(appScript)
-            document.body.removeChild(particlesScript)
+            
+            // animationContainer.removeChild(appScript)
+            // animationContainer.removeChild(particlesScript)
+
+            document.body.removeChild(animationContainer)
         }
     },[])
 
