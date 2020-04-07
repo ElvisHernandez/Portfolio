@@ -8,13 +8,16 @@ const Home = () => {
         const particlesScript = document.createElement('script')
         appScript.src = './particles.js'
         particlesScript.src = './app.js'
+        appScript.async = true
 
         document.body.appendChild(appScript)
-        document.body.appendChild(particlesScript)
+        setTimeout(() => {
+            document.body.appendChild(particlesScript)
+        },500)
 
         return () => {
             document.body.removeChild(appScript)
-            document.body.removeChild(particlesScript)
+            // document.body.removeChild(particlesScript)
         }
     },[])
 
