@@ -13,7 +13,7 @@ const Home = () => {
         document.body.appendChild(appScript)
         setTimeout(() => {
             document.body.appendChild(particlesScript)
-        },100)
+        },200)
 
         return () => {
             document.body.removeChild(appScript)
@@ -24,7 +24,7 @@ const Home = () => {
     return (
         <>                
             <section id='particles-js' className={styles.particlesJs}><span className={styles.intro}>Hi 
-            there, my name is Elvis Hernandez <br/> and I'm a Full-Stack Web Developer.</span></section>
+            there, I'm Elvis and I'm a <br/>Full-Stack Web Developer.</span></section>
         </>
     );
 }
