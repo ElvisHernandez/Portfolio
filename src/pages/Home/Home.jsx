@@ -13,7 +13,7 @@ const Home = () => {
         document.body.appendChild(appScript)
         setTimeout(() => {
             document.body.appendChild(particlesScript)
-        },500)
+        },100)
 
         return () => {
             document.body.removeChild(appScript)
