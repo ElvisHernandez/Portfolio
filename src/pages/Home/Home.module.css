@@ -1,0 +1,22 @@
+.home {
+    height: 500px;
+    width: 100vw;
+    background-color: #23153C;
+}
+
+.particlesJs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 0; */
+    height: 500px;
+    width: 100vw;
+    background: black;
+}
+
+.intro {
+    display: inline-block;
+    color: white;
+    position: fixed;
+    align-content: center;
+}
