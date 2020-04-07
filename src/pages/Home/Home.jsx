@@ -38,7 +38,7 @@ const Home = () => {
     return (
         <>                
             <h1 className='something'>Hi there, my name is Elvis Hernandez and I'm a Full-Stack Web Developer.</h1> 
-            <section id='particles-js' className={styles.particlesJs}>dsfsdfsd</section>
+            <section id='particles-js' className={styles.particlesJs}><span className={styles.intro}> Placeholder Text</span></section>
             {addIntro()}
         </>
     );
