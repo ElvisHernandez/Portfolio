@@ -593,6 +593,8 @@ var pJS = function(tag_id, params){
         break;
       }
 
+      centerForce(p)
+
       /* events */
       if(isInArray('grab', pJS.interactivity.events.onhover.mode)){
         pJS.fn.modes.grabParticle(p);
@@ -920,6 +922,36 @@ var pJS = function(tag_id, params){
 
   };
 
+  // ******************************************************************************************************************
+  //                                                    TESTING
+  // ******************************************************************************************************************
+  function centerForce(p) {
+    var dx_mouse = p.x - pJS.canvas.w/2,
+    dy_mouse = p.y - pJS.canvas.h/2,
+    dist_mouse = Math.sqrt(dx_mouse*dx_mouse + dy_mouse*dy_mouse);
+
+    var normVec = {x: dx_mouse/dist_mouse, y: dy_mouse/dist_mouse},
+        repulseRadius = 250,
+        velocity = 100,
+        repulseFactor = clamp((1/repulseRadius)*(-1*Math.pow(dist_mouse/repulseRadius,2)+1)*repulseRadius*velocity, 0, 50);
+    
+    var pos = {
+      x: p.x + normVec.x * repulseFactor,
+      y: p.y + normVec.y * repulseFactor
+    }
+
+    if(pJS.particles.move.out_mode == 'bounce'){
+      if(pos.x - p.radius > 0 && pos.x + p.radius < pJS.canvas.w) p.x = pos.x;
+      if(pos.y - p.radius > 0 && pos.y + p.radius < pJS.canvas.h) p.y = pos.y;
+    }else{
+      p.x = pos.x;
+      p.y = pos.y;
+    }
+
+  }
+  // **********************************************************************************************************************
+  //                                                   ^ TESTING ^
+  // **********************************************************************************************************************
 
   pJS.fn.modes.repulseParticle = function(p){
 
@@ -1068,6 +1100,9 @@ var pJS = function(tag_id, params){
       pJS.interactivity.el = pJS.canvas.el;
     }
 
+    // *****************************************************************************************************************************
+    //                                                      MOUSE MOVE EVENT LISTENER
+    // *****************************************************************************************************************************
 
     /* detect mouse pos - on hover / click event */
     if(pJS.interactivity.events.onhover.enable || pJS.interactivity.events.onclick.enable){
@@ -1106,6 +1141,9 @@ var pJS = function(tag_id, params){
       });
 
     }
+    // *****************************************************************************************************************************
+    //                                                      MOUSE MOVE EVENT LISTENER
+    // *****************************************************************************************************************************
 
     /* on click event */
     if(pJS.interactivity.events.onclick.enable){
@@ -1368,7 +1406,9 @@ var pJS = function(tag_id, params){
     }
 
   };
-
+    // *****************************************************************************************************************************
+    //                                                      INITIATION
+    // *****************************************************************************************************************************
 
   pJS.fn.vendors.init = function(){
 
@@ -1378,6 +1418,12 @@ var pJS = function(tag_id, params){
     pJS.fn.canvasSize();
     pJS.fn.canvasPaint();
     pJS.fn.particlesCreate();
+
+    // ADD CENTER FORCE FIELD FUNCTION HERE
+
+    // pJS.fn.centerForce();
+
+
     pJS.fn.vendors.densityAutoParticles();
 
     /* particles.line_linked - convert hex colors to rgb */
@@ -1385,7 +1431,13 @@ var pJS = function(tag_id, params){
 
   };
 
+  // pJS.fn.centerForce = function() {
 
+  // }
+
+  // *****************************************************************************************************************************
+  //                                                      INITIATION
+  // *****************************************************************************************************************************
   pJS.fn.vendors.start = function(){
 
     if(isInArray('image', pJS.particles.shape.type)){
@@ -1410,6 +1462,7 @@ var pJS = function(tag_id, params){
 
 
 };
+
 
 /* ---------- global functions - vendors ------------ */
 
