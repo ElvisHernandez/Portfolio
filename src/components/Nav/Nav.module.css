@@ -2,7 +2,7 @@
 .nav {
     border-right: 1px solid #228B22;
     display: flex;
-    margin: 0 1rem 0 1rem;
+    margin-left:1rem;
     padding-right: 1rem;
 }
 
@@ -16,6 +16,11 @@
 }
 
 a {
-    color: #00FFFF;
+    text-decoration: none;
+    color: whitesmoke;
     font-size: 2rem; 
+}
+
+a:hover {
+    color:#00FFFF;
 }
