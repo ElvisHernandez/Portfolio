@@ -931,7 +931,7 @@ var pJS = function(tag_id, params){
     dist_mouse = Math.sqrt(dx_mouse*dx_mouse + dy_mouse*dy_mouse);
 
     var normVec = {x: dx_mouse/dist_mouse, y: dy_mouse/dist_mouse},
-        repulseRadius = 250,
+        repulseRadius = 350,
         velocity = 100,
         repulseFactor = clamp((1/repulseRadius)*(-1*Math.pow(dist_mouse/repulseRadius,2)+1)*repulseRadius*velocity, 0, 50);
     

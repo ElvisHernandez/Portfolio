@@ -13,7 +13,7 @@ const Home = () => {
     return (
         <>                
             <section id='particles-js' className={styles.particlesJs}><span className={styles.intro}>Hi 
-            there, I'm Elvis and I'm a <br/>Full-Stack Web Developer.</span></section>
+            there, I'm <span className={styles.name}>Elvis</span> and I'm a <br/>Full-Stack Web Developer.</span></section>
         </>
     );
 }

@@ -12,12 +12,19 @@
     height: 100vh;
     width: 100vw;
     background: black;
+    background-image: url(./ReactCodeOpac.png);
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
 }
 
 .intro {
     display: inline-block;
-    font-size: xx-large;
+    font-size: 3rem;
     color: whitesmoke;
     position: absolute;
     align-content: center;
+}
+
+.name {
+    color:#00FFFF;
 }
