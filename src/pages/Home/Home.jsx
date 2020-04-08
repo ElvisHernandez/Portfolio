@@ -4,21 +4,10 @@ import styles from './Home.module.css'
 const Home = () => {
 
     useEffect(() => {
-        const appScript = document.createElement('script')
-        // const particlesScript = document.createElement('script')
-        appScript.src = './particles.js'
-        // particlesScript.src = './app.js'
-        appScript.async = true
-
-        document.body.appendChild(appScript)
-        // setTimeout(() => {
-            // document.body.appendChild(particlesScript)
-        // },200)
-
-        return () => {
-            // document.body.removeChild(appScript)
-            // document.body.removeChild(particlesScript)
-        }
+        const particleScript = document.createElement('script')
+        particleScript.src = './particles.js'
+        particleScript.async = true
+        document.body.appendChild(particleScript)
     },[])
 
     return (
