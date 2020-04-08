@@ -593,6 +593,8 @@ var pJS = function(tag_id, params){
         break;
       }
 
+      centerForce(p)
+
       /* events */
       if(isInArray('grab', pJS.interactivity.events.onhover.mode)){
         pJS.fn.modes.grabParticle(p);
@@ -920,6 +922,36 @@ var pJS = function(tag_id, params){
 
   };
 
+  // ******************************************************************************************************************
+  //                                                    TESTING
+  // ******************************************************************************************************************
+  function centerForce(p) {
+    var dx_mouse = p.x - pJS.canvas.w/2,
+    dy_mouse = p.y - pJS.canvas.h/2,
+    dist_mouse = Math.sqrt(dx_mouse*dx_mouse + dy_mouse*dy_mouse);
+
+    var normVec = {x: dx_mouse/dist_mouse, y: dy_mouse/dist_mouse},
+        repulseRadius = 250,
+        velocity = 100,
+        repulseFactor = clamp((1/repulseRadius)*(-1*Math.pow(dist_mouse/repulseRadius,2)+1)*repulseRadius*velocity, 0, 50);
+    
+    var pos = {
+      x: p.x + normVec.x * repulseFactor,
+      y: p.y + normVec.y * repulseFactor
+    }
+
+    if(pJS.particles.move.out_mode == 'bounce'){
+      if(pos.x - p.radius > 0 && pos.x + p.radius < pJS.canvas.w) p.x = pos.x;
+      if(pos.y - p.radius > 0 && pos.y + p.radius < pJS.canvas.h) p.y = pos.y;
+    }else{
+      p.x = pos.x;
+      p.y = pos.y;
+    }
+
+  }
+  // **********************************************************************************************************************
+  //                                                   ^ TESTING ^
+  // **********************************************************************************************************************
 
   pJS.fn.modes.repulseParticle = function(p){
 
@@ -1068,6 +1100,9 @@ var pJS = function(tag_id, params){
       pJS.interactivity.el = pJS.canvas.el;
     }
 
+    // *****************************************************************************************************************************
+    //                                                      MOUSE MOVE EVENT LISTENER
+    // *****************************************************************************************************************************
 
     /* detect mouse pos - on hover / click event */
     if(pJS.interactivity.events.onhover.enable || pJS.interactivity.events.onclick.enable){
@@ -1106,6 +1141,9 @@ var pJS = function(tag_id, params){
       });
 
     }
+    // *****************************************************************************************************************************
+    //                                                      MOUSE MOVE EVENT LISTENER
+    // *****************************************************************************************************************************
 
     /* on click event */
     if(pJS.interactivity.events.onclick.enable){
@@ -1368,7 +1406,9 @@ var pJS = function(tag_id, params){
     }
 
   };
-
+    // *****************************************************************************************************************************
+    //                                                      INITIATION
+    // *****************************************************************************************************************************
 
   pJS.fn.vendors.init = function(){
 
@@ -1378,6 +1418,12 @@ var pJS = function(tag_id, params){
     pJS.fn.canvasSize();
     pJS.fn.canvasPaint();
     pJS.fn.particlesCreate();
+
+    // ADD CENTER FORCE FIELD FUNCTION HERE
+
+    // pJS.fn.centerForce();
+
+
     pJS.fn.vendors.densityAutoParticles();
 
     /* particles.line_linked - convert hex colors to rgb */
@@ -1385,7 +1431,13 @@ var pJS = function(tag_id, params){
 
   };
 
+  // pJS.fn.centerForce = function() {
 
+  // }
+
+  // *****************************************************************************************************************************
+  //                                                      INITIATION
+  // *****************************************************************************************************************************
   pJS.fn.vendors.start = function(){
 
     if(isInArray('image', pJS.particles.shape.type)){
@@ -1410,6 +1462,7 @@ var pJS = function(tag_id, params){
 
 
 };
+
 
 /* ---------- global functions - vendors ------------ */
 
@@ -1475,7 +1528,6 @@ function isInArray(value, array) {
 window.pJSDom = [];
 
 window.particlesJS = function(tag_id, params){
-
   //console.log(params);
 
   /* no string id? so it's object params, and set the id with default id */
@@ -1520,7 +1572,7 @@ window.particlesJS = function(tag_id, params){
 };
 
 window.particlesJS.load = function(tag_id, path_config_json, callback){
-
+  console.log('loaded')
   /* load json config */
   var xhr = new XMLHttpRequest();
   xhr.open('GET', path_config_json);
@@ -1540,3 +1592,125 @@ window.particlesJS.load = function(tag_id, path_config_json, callback){
 
 };
 
+// window.particlesJS.load('particles-js', './app.js')
+
+particlesJS('particles-js',
+  
+  {
+    "particles": {
+      "number": {
+        "value": 160,
+        "density": {
+          "enable": false,
+          "value_area": 10
+        }
+      },
+      "color": {
+        "value": ["#c91a1a","#00FFFF"]
+      },
+      "shape": {
+        "type": "circle",
+        "stroke": {
+          "width": 2,
+          "color": "#00FFFF"
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 100,
+          "height": 100
+        }
+      },
+      "opacity": {
+        "value": 0.0,
+        "random": false,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 3,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 40,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#228B22",
+        "opacity": 0.5,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 4,
+        "direction": "bottom",
+        "random": 'true',
+        "straight": false,
+        "out_mode": "bounce",
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "repulse"
+        },
+        "onclick": {
+          "enable": false,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 400,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 400,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 200
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true,
+    "config_demo": {
+      "hide_card": false,
+      "background_color": "#b61924",
+      "background_image": "",
+      "background_position": "50% 50%",
+      "background_repeat": "no-repeat",
+      "background_size": "cover"
+    }
+  }
+
+);

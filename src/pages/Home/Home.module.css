@@ -18,6 +18,6 @@
     display: inline-block;
     font-size: xx-large;
     color: whitesmoke;
-    position: fixed;
+    position: absolute;
     align-content: center;
 }
