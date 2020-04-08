@@ -1,4 +1,21 @@
 
+.nav {
+    border-right: 1px solid #228B22;
+    display: flex;
+    margin: 0 1rem 0 1rem;
+    padding-right: 1rem;
+}
+
 .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     list-style-type: none;
+    padding: 0;
+    /* margin: 0 1rem 0 1rem; */
+}
+
+a {
+    color: #00FFFF;
+    font-size: 2rem; 
 }

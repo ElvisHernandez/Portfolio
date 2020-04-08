@@ -1,4 +1,10 @@
 
 body {
-    margin: 0
+    margin: 0;
+}
+
+#root {
+    display: flex;
+    background: black;
+    /* align-items: center; */
 }

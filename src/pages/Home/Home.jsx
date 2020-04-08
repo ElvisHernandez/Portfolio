@@ -3,12 +3,12 @@ import styles from './Home.module.css'
 
 const Home = () => {
 
-    // useEffect(() => {
-    //     const particleScript = document.createElement('script')
-    //     particleScript.src = './particles.js'
-    //     particleScript.async = true
-    //     document.body.appendChild(particleScript)
-    // },[])
+    useEffect(() => {
+        const particleScript = document.createElement('script')
+        particleScript.src = './particles.js'
+        particleScript.async = true
+        document.body.appendChild(particleScript)
+    },[])
 
     return (
         <>                
