@@ -13,10 +13,10 @@
     text-align: center;
     /* margin: 0; */
     position: relative;
-    left: 10vw;
-    top: 5vh;
-    height: 95vh;
-    width: 90vw;
+    left: 160px;
+    top: 50px;
+    width: calc(100vw - 160px);
+    height: calc(100vh - 50px);
     background: black;
     background-image: url(./ReactCodeOpac.png);
     /* background-repeat: no-repeat; */

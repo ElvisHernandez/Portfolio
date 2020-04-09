@@ -18,7 +18,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';
 import styles from './Nav.module.css'
 
-const drawerWidth = "10vw";
+const drawerWidth = "160px";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,9 +32,9 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     [theme.breakpoints.up('sm')]: {
-      width: `90vw`,
-      height: '5vh',
-      // marginLeft: drawerWidth,
+      width: `calc(100% - ${drawerWidth}px)`,
+      height: '50px',
+      marginLeft: drawerWidth,
       background:'#1e1d1d'
     },
   },
@@ -122,9 +122,9 @@ function ResponsiveDrawer(props) {
           >
             <MenuIcon />
           </IconButton>
-          {/* <Typography variant="h6" noWrap>
+          <Typography variant="h6" noWrap>
             Elvis' Portfolio Site
-          </Typography> */}
+          </Typography>
         </Toolbar>
       </AppBar>
 

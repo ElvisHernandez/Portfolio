@@ -8,9 +8,6 @@ const Home = () => {
         particleScript.src = './particles.js'
         particleScript.async = true
         document.body.appendChild(particleScript)
-
-        const canvas = document.querySelector('particles-js')
-        console.log(canvas)
     },[])
 
     return (
