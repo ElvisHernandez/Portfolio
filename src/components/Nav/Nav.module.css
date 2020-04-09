@@ -1,35 +1,9 @@
 
-.nav {
-    background: rgb(14, 13, 13);
-    border-right: 1px solid #228B22;
-    display: flex;
-    padding-left:1rem;
-    padding-right: 1rem;
-}
 
-.navbar {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    list-style-type: none;
-    padding: 0;
-    /* margin: 0 1rem 0 1rem; */
-}
-
-a {
-    text-decoration: none;
-    color: whitesmoke;
-    font-size: 2rem; 
-}
-
-a:hover {
-    color:#00FFFF;
-}
-
-.text {
+/* .text {
     color: whitesmoke;
 }
 
 .text:hover {
     color: #00FFFF;
-}
+} */

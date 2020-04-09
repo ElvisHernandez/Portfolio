@@ -61,6 +61,12 @@ const GlobalCSS = withStyles({
     "@global" : {
         ".MuiSvgIcon-root": {
             color: "#228B22"
+        },
+        ".MuiListItemText-primary": {
+            color: 'whitesmoke',
+            "&:hover": {
+                color:'#00FFFF'
+            }
         }
     }
 })(() => null)
