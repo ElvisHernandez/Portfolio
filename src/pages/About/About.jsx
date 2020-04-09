@@ -1,8 +1,11 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
 
 const About = () => {
     return (
-        <h1>About</h1>
+        <Button variant="contained" color="primary">
+        About
+      </Button>
     );
 }
  
