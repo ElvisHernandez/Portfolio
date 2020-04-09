@@ -15,7 +15,8 @@ import MailIcon from '@material-ui/icons/Mail';
 import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';
+import styles from './Nav.module.css'
 
 const drawerWidth = 240;
 
@@ -33,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
+      background:'#1e1d1d'
     },
   },
   menuButton: {
@@ -45,12 +47,23 @@ const useStyles = makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: drawerWidth,
+    background:'#1e1d1d',
+    // color:'whitesmoke'
+
   },
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
   },
 }));
+
+const GlobalCSS = withStyles({
+    "@global" : {
+        ".MuiSvgIcon-root": {
+            color: "#228B22"
+        }
+    }
+})(() => null)
 
 function ResponsiveDrawer(props) {
   const { container } = props;
@@ -69,8 +82,8 @@ function ResponsiveDrawer(props) {
       <List>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
           <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
+            <ListItemIcon className={styles.icons}>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+            <ListItemText className={styles.text} primary={text} />
           </ListItem>
         ))}
       </List>
@@ -88,7 +101,9 @@ function ResponsiveDrawer(props) {
 
   return (
     <div className={classes.root}>
+      <GlobalCSS />
       <CssBaseline />
+      
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
           <IconButton
@@ -100,18 +115,21 @@ function ResponsiveDrawer(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Responsive drawer
-          </Typography>
+          {/* <Typography variant="h6" noWrap>
+            Elvis' Portfolio Site
+          </Typography> */}
         </Toolbar>
       </AppBar>
+
+
+
       <nav className={classes.drawer} aria-label="mailbox folders">
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Hidden smUp implementation="css">
           <Drawer
             container={container}
             variant="temporary"
-            anchor={theme.direction === 'rtl' ? 'right' : 'left'}
+            // anchor={theme.direction === 'rtl' ? 'right' : 'left'}
             open={mobileOpen}
             onClose={handleDrawerToggle}
             classes={{
@@ -136,15 +154,6 @@ function ResponsiveDrawer(props) {
           </Drawer>
         </Hidden>
       </nav>
-      <main className={classes.content}>
-        <div className={classes.toolbar} />
-        <Typography paragraph>
-          bbb
-        </Typography>
-        <Typography paragraph>
-            aaa
-        </Typography>
-      </main>
     </div>
   );
 }

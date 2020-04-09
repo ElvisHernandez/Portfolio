@@ -25,3 +25,11 @@ a {
 a:hover {
     color:#00FFFF;
 }
+
+.text {
+    color: whitesmoke;
+}
+
+.text:hover {
+    color: #00FFFF;
+}
