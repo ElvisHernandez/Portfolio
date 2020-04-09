@@ -1,8 +1,3 @@
-/* .home {
-    height: 500px;
-    width: 100vw;
-    background-color: #23153C;
-} */
 
 .particlesJs {
     display: flex;
@@ -23,17 +18,6 @@
     /* background-size: cover; */
 }
 
-@media (max-width: 600px) {
-    .particlesJs {
-        left:0;
-        width: 100vw;
-    }
-
-    .intro {
-        color: red;
-    }
-}
-
 .intro {
     /* display: inline-block; */
     position: absolute;
@@ -43,6 +27,23 @@
     /* position: relative; */
     /* align-content: center; */
     /* text-align: center; */
+}
+
+@media (max-width: 900px) {
+    .intro {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .particlesJs {
+        left:0;
+        width: 100vw;
+    }
+
+    .intro {
+        font-size: 1.5rem;
+    }
 }
 
 .name {

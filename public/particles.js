@@ -114,6 +114,7 @@ var pJS = function(tag_id, params){
         },
         repulse:{
           distance: 200,
+          center: 350,
           duration: 0.4
         },
         push:{
@@ -931,7 +932,7 @@ var pJS = function(tag_id, params){
     dist_mouse = Math.sqrt(dx_mouse*dx_mouse + dy_mouse*dy_mouse);
 
     var normVec = {x: dx_mouse/dist_mouse, y: dy_mouse/dist_mouse},
-        repulseRadius = 350,
+        repulseRadius = pJS.interactivity.modes.repulse.center,
         velocity = 100,
         repulseFactor = clamp((1/repulseRadius)*(-1*Math.pow(dist_mouse/repulseRadius,2)+1)*repulseRadius*velocity, 0, 50);
     
@@ -1561,6 +1562,9 @@ window.particlesJS = function(tag_id, params){
   canvas_el.style.width = "100%";
   canvas_el.style.height = "100%";
 
+  // set center force radius
+  canvas_el.center = 350;
+
   /* append canvas */
   var canvas = document.getElementById(tag_id).appendChild(canvas_el);
 
@@ -1692,7 +1696,8 @@ particlesJS('particles-js',
           "speed": 3
         },
         "repulse": {
-          "distance": 200
+          "distance": 200,
+          "center": 350
         },
         "push": {
           "particles_nb": 4
