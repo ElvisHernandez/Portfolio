@@ -122,9 +122,9 @@ function ResponsiveDrawer(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
+          {/* <Typography variant="h6" noWrap>
             Elvis' Portfolio Site
-          </Typography>
+          </Typography> */}
         </Toolbar>
       </AppBar>
 

@@ -23,6 +23,17 @@
     /* background-size: cover; */
 }
 
+@media (max-width: 600px) {
+    .particlesJs {
+        left:0;
+        width: 100vw;
+    }
+
+    .intro {
+        color: red;
+    }
+}
+
 .intro {
     /* display: inline-block; */
     position: absolute;
