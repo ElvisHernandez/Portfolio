@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from './Projects.module.css'
 
 const Projects = () => {
     return (
-        <h1>Projects</h1>
+        <h1 className={styles.text} >Projects</h1>
     );
 }
  
