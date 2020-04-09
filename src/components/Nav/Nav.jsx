@@ -18,7 +18,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';
 import styles from './Nav.module.css'
 
-const drawerWidth = 240;
+const drawerWidth = "10%";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,8 +32,9 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     [theme.breakpoints.up('sm')]: {
-      width: `calc(100% - ${drawerWidth}px)`,
-      marginLeft: drawerWidth,
+      width: `90%`,
+      height: '5%',
+      // marginLeft: drawerWidth,
       background:'#1e1d1d'
     },
   },
