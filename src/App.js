@@ -6,7 +6,11 @@ function App() {
   return (
     <>
       <Nav />
-      <Home />
+      <main>
+        <Home />
+        <Projects />
+        <About />
+      </main>
     </>
   );
 }

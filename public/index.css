@@ -5,6 +5,6 @@ body {
 
 #root {
     display: flex;
-    background: rgb(14, 13, 13);
+    /* background: rgb(14, 13, 13); */
     /* align-items: center; */
 }
