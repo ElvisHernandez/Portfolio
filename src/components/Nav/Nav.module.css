@@ -1,26 +1,9 @@
 
-.nav {
-    border-right: 1px solid #228B22;
-    display: flex;
-    margin-left:1rem;
-    padding-right: 1rem;
+
+.drawer {
+    text-align: center;
 }
 
-.navbar {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    list-style-type: none;
-    padding: 0;
-    /* margin: 0 1rem 0 1rem; */
-}
-
-a {
+.links {
     text-decoration: none;
-    color: whitesmoke;
-    font-size: 2rem; 
-}
-
-a:hover {
-    color:#00FFFF;
 }
