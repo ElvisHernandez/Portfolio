@@ -1,14 +1,4 @@
 
-// if (randoScript) {
-
-// } else {
-//     const randoScript = document.getElementById('animationInitializer')
-//     console.log('Center in the script: ',randoScript.center)
-// }
-
-// let randoScript = document.getElementById('animationInitializer')
-// console.log('Center in the script: ',randoScript.center)
-
 particlesJS('particles-js',
   
   {
@@ -90,7 +80,7 @@ particlesJS('particles-js',
           "enable": false,
           "mode": "push"
         },
-        "resize": false
+        "resize": true
       },
       "modes": {
         "grab": {

@@ -15,16 +15,7 @@ const Home = () => {
     },[])
 
     function startAnimation(forceRadius) {
-        let animationInitializer = document.getElementById('animationInitializer')
-        let canvas = document.querySelector('canvas')
-
-        if (canvas) {
-            canvas.parentNode.removeChild(canvas)
-        } 
-        if (animationInitializer) {
-            animationInitializer.parentNode.removeChild(animationInitializer)
-        } 
-        animationInitializer = document.createElement('script')
+        const animationInitializer = document.createElement('script')
         animationInitializer.src = './app.js'
         animationInitializer.id = 'animationInitializer'
         animationInitializer.center = forceRadius
@@ -34,8 +25,6 @@ const Home = () => {
     }
 
     function viewportToForceRadius(viewport) {
-        // const viewport = window.innerWidth
-
         if (viewport > 900) return 350
         else if (viewport > 600) return 250
         else return 160 
