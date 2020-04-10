@@ -1,6 +1,6 @@
 
-const randoScript = document.getElementById('randoScript')
-console.log(randoScript.randomAttribute)
+const randoScript = document.getElementById('animationInitializer')
+console.log('Center in the script: ',randoScript.center)
 
 particlesJS('particles-js',
   
@@ -101,7 +101,7 @@ particlesJS('particles-js',
         },
         "repulse": {
           "distance": 200,
-          "center": 350
+          "center": randoScript.center
         },
         "push": {
           "particles_nb": 4

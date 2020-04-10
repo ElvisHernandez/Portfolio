@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import styles from './Home.module.css'
 
+
 const Home = () => {
 
     useEffect(() => {
@@ -8,26 +9,39 @@ const Home = () => {
         particleScript.src = './particles.js'
         particleScript.async = true
 
-
-
         document.body.appendChild(particleScript)
         // window.addEventListener('resize',callback)
 
         window.onload = () => {
-            // const canvas = document.querySelector('canvas')
-            // console.log(canvas.center)
-            const script = document.createElement('script')
-            script.src = './app.js'
-            script.id = 'randoScript'
-            script.randomAttribute = 'this is my random attribute'
-            script.async = true
-            document.body.appendChild(script)
+            const forceRadius = viewportToForceRadius()
+            setForceRadius(forceRadius)
         }
         return () => {
             // window.removeEventListener('resize', callback)
         }
     },[])
 
+    function setForceRadius(forceRadius) {
+        let animationInitializer = document.getElementById('animationInitializer')
+        if (animationInitializer) {
+            animationInitializer.center = forceRadius
+        } else {
+            animationInitializer = document.createElement('script')
+            animationInitializer.src = './app.js'
+            animationInitializer.id = 'animationInitializer'
+            animationInitializer.center = forceRadius
+            animationInitializer.async = true
+            document.body.appendChild(animationInitializer)
+        }
+    }
+
+    function viewportToForceRadius() {
+        const viewport = window.innerWidth
+
+        if (viewport > 900) return 350
+        else if (viewport > 600) return 250
+        else return 160 
+    }
 
 
     function callback() {
