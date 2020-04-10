@@ -7,15 +7,32 @@ const Home = () => {
         const particleScript = document.createElement('script')
         particleScript.src = './particles.js'
         particleScript.async = true
-        document.body.appendChild(particleScript)
-        window.addEventListener('resize',callback)
 
+
+
+        document.body.appendChild(particleScript)
+        // window.addEventListener('resize',callback)
+
+        window.onload = () => {
+            // const canvas = document.querySelector('canvas')
+            // console.log(canvas.center)
+            const script = document.createElement('script')
+            script.src = './app.js'
+            script.id = 'randoScript'
+            script.randomAttribute = 'this is my random attribute'
+            script.async = true
+            document.body.appendChild(script)
+        }
         return () => {
-            window.removeEventListener('resize', callback)
+            // window.removeEventListener('resize', callback)
         }
     },[])
 
+
+
     function callback() {
+        const canvas = document.querySelector('canvas')
+        console.log(canvas.center)
         console.log('This is the supposed viewport width: ', window.innerWidth)
     }
     return (
