@@ -1,13 +1,20 @@
 
-const randoScript = document.getElementById('animationInitializer')
-console.log('Center in the script: ',randoScript.center)
+// if (randoScript) {
+
+// } else {
+//     const randoScript = document.getElementById('animationInitializer')
+//     console.log('Center in the script: ',randoScript.center)
+// }
+
+// let randoScript = document.getElementById('animationInitializer')
+// console.log('Center in the script: ',randoScript.center)
 
 particlesJS('particles-js',
   
   {
     "particles": {
       "number": {
-        "value": 160,
+        "value": document.getElementById('animationInitializer').particles,
         "density": {
           "enable": false,
           "value_area": 10
@@ -83,7 +90,7 @@ particlesJS('particles-js',
           "enable": false,
           "mode": "push"
         },
-        "resize": true
+        "resize": false
       },
       "modes": {
         "grab": {
@@ -101,7 +108,7 @@ particlesJS('particles-js',
         },
         "repulse": {
           "distance": 200,
-          "center": randoScript.center
+          "center": document.getElementById('animationInitializer').center
         },
         "push": {
           "particles_nb": 4

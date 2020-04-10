@@ -5,50 +5,54 @@ import styles from './Home.module.css'
 const Home = () => {
 
     useEffect(() => {
-        const particleScript = document.createElement('script')
-        particleScript.src = './particles.js'
-        particleScript.async = true
-
-        document.body.appendChild(particleScript)
-        // window.addEventListener('resize',callback)
-
         window.onload = () => {
-            const forceRadius = viewportToForceRadius()
-            setForceRadius(forceRadius)
-        }
-        return () => {
-            // window.removeEventListener('resize', callback)
+            const currentViewWidth = window.innerWidth
+            const widthRange = viewWidthRange(currentViewWidth)
+
+            const forceRadius = viewportToForceRadius(currentViewWidth)
+            startAnimation(forceRadius)
         }
     },[])
 
-    function setForceRadius(forceRadius) {
+    function startAnimation(forceRadius) {
         let animationInitializer = document.getElementById('animationInitializer')
+        let canvas = document.querySelector('canvas')
+
+        if (canvas) {
+            canvas.parentNode.removeChild(canvas)
+        } 
         if (animationInitializer) {
-            animationInitializer.center = forceRadius
-        } else {
-            animationInitializer = document.createElement('script')
-            animationInitializer.src = './app.js'
-            animationInitializer.id = 'animationInitializer'
-            animationInitializer.center = forceRadius
-            animationInitializer.async = true
-            document.body.appendChild(animationInitializer)
-        }
+            animationInitializer.parentNode.removeChild(animationInitializer)
+        } 
+        animationInitializer = document.createElement('script')
+        animationInitializer.src = './app.js'
+        animationInitializer.id = 'animationInitializer'
+        animationInitializer.center = forceRadius
+        animationInitializer.particles = numberOfParticles(window.innerWidth)
+        animationInitializer.async = true
+        document.body.appendChild(animationInitializer) 
     }
 
-    function viewportToForceRadius() {
-        const viewport = window.innerWidth
+    function viewportToForceRadius(viewport) {
+        // const viewport = window.innerWidth
 
         if (viewport > 900) return 350
         else if (viewport > 600) return 250
         else return 160 
     }
 
-
-    function callback() {
-        const canvas = document.querySelector('canvas')
-        console.log(canvas.center)
-        console.log('This is the supposed viewport width: ', window.innerWidth)
+    function viewWidthRange(width) {
+        if (width > 900) return 'lg' 
+        else if (width > 600) return 'md' 
+        else return 'sm'
     }
+
+    function numberOfParticles(viewportWidth) {
+        if (viewportWidth > 900) return 160
+        else if (viewportWidth > 600) return 130
+        else return 100
+    }
+
     return (
         <>                
             <section id='particles-js' className={styles.particlesJs}><span className={styles.intro}> Hi 
