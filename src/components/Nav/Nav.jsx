@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Divider from '@material-ui/core/Divider';
@@ -8,11 +7,12 @@ import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
 
 
-import InboxIcon from '@material-ui/icons/MoveToInbox';
+
+
+import HttpIcon from '@material-ui/icons/Http';
 import HomeIcon from '@material-ui/icons/Home';
 import CodeIcon from '@material-ui/icons/Code';
 import PermMediaIcon from '@material-ui/icons/PermMedia';
-import CloudIcon from '@material-ui/icons/Cloud';
 import FaceIcon from '@material-ui/icons/Face';
 
 
@@ -27,7 +27,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 
 
-import MailIcon from '@material-ui/icons/Mail';
 import MenuIcon from '@material-ui/icons/Menu';
 
 
@@ -87,6 +86,13 @@ const GlobalCSS = withStyles({
             "&:hover": {
                 color:'#00FFFF'
             }
+        },
+        "#httpIcon": {
+          transform: 'scale(4)',
+          marginTop: '1rem'
+        },
+        "#drawerList": {
+
         }
     }
 })(() => null)
@@ -109,10 +115,11 @@ function ResponsiveDrawer(props) {
   };
 
   const drawer = (
-    <div>
+    <div className={styles.drawer}>
+      <HttpIcon id="httpIcon"/>
       <div className={classes.toolbar} />
       <Divider />
-      <List>
+      <List id="drawerList">
         {['Home', 'Skills', 'Projects', 'About'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon className={styles.icons}>{iconHash[index]}</ListItemIcon>
