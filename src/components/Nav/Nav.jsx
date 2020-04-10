@@ -14,6 +14,9 @@ import HomeIcon from '@material-ui/icons/Home';
 import CodeIcon from '@material-ui/icons/Code';
 import PermMediaIcon from '@material-ui/icons/PermMedia';
 import FaceIcon from '@material-ui/icons/Face';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
+
 
 
 
@@ -92,16 +95,21 @@ const GlobalCSS = withStyles({
           marginTop: '1rem'
         },
         "#drawerList": {
-
+          marginTop:'10rem'
+        },
+        "#externalLinks": {
+          marginTop: '3rem'
         }
     }
 })(() => null)
 
 const iconHash = {
-  0: <HomeIcon />,
-  1: <CodeIcon />,
-  2: <PermMediaIcon />,
-  3: <FaceIcon />
+  0: [<HomeIcon />,'#particles-js'],
+  1: [<CodeIcon />, '#'],
+  2: [<PermMediaIcon />, '#'],
+  3: [<FaceIcon />, '#'],
+  4: [<LinkedInIcon />, "https://www.linkedin.com/in/elvis-hernandez-9669a618a/"],
+  5: [<GitHubIcon />, 'https://github.com/ElvisHernandez']
 }
 
 function ResponsiveDrawer(props) {
@@ -121,21 +129,25 @@ function ResponsiveDrawer(props) {
       <Divider />
       <List id="drawerList">
         {['Home', 'Skills', 'Projects', 'About'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon className={styles.icons}>{iconHash[index]}</ListItemIcon>
-            <ListItemText className={styles.text} primary={text} />
-          </ListItem>
+          <a className={styles.links} href={iconHash[index][1]} target='_blank'>
+            <ListItem button key={text}>
+              <ListItemIcon className={styles.icons}>{iconHash[index][0]}</ListItemIcon>
+              <ListItemText className={styles.text} primary={text} />
+            </ListItem>
+          </a>
         ))}
       </List>
-      {/* <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
+      <Divider />
+      <List id="externalLinks">
+        {['LinkedIn', 'Github'].map((text, index) => (
+          <a className={styles.links} href={iconHash[index+4][1]} target='_blank'>
+            <ListItem button key={text}>
+              <ListItemIcon>{iconHash[index+4][0]}</ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItem>
+          </a>
         ))}
-      </List> */}
+      </List>
     </div>
   );
 
