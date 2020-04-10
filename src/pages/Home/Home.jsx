@@ -27,7 +27,7 @@ const Home = () => {
     function viewportToForceRadius(viewport) {
         if (viewport > 900) return 350
         else if (viewport > 600) return 250
-        else return 160 
+        else return 100 
     }
 
     function viewWidthRange(width) {
@@ -39,7 +39,7 @@ const Home = () => {
     function numberOfParticles(viewportWidth) {
         if (viewportWidth > 900) return 160
         else if (viewportWidth > 600) return 130
-        else return 100
+        else return 60
     }
 
     return (

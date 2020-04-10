@@ -90,6 +90,9 @@ const GlobalCSS = withStyles({
                 color:'#00FFFF'
             }
         },
+        ".MuiToolbar-gutters": {
+          background: '#1e1d1d'
+        } ,
         "#httpIcon": {
           transform: 'scale(4)',
           marginTop: '1rem'
