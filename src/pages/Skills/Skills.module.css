@@ -15,8 +15,11 @@
 }
 
 .skillsIntro {
-    height: 40rem;
+    height: 20rem;
+    /* margin-top: 3.1rem; */
+    margin-top: 40.0rem;
     background: #1f6b1f;
+    width: 100vw
 }
 
 .skills {
@@ -24,7 +27,7 @@
     position: relative;
     bottom: 10rem;
     left: 80px;
-    border: 1px solid whitesmoke;
+    border: 1px solid green;
     border-radius: 10px;
     background: #1e1d1d;
     height: 40rem;

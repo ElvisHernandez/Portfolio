@@ -12,6 +12,7 @@
     top: 50px;
     width: calc(100vw - 160px);
     height: calc(100vh - 50px);
+    border-radius: 10px;
     background: black;
     background-image: url(./ReactCodeOpac.png);
     /* background-repeat: no-repeat; */
