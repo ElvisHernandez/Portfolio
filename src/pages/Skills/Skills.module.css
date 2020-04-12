@@ -34,3 +34,13 @@
     height: 40rem;
     width: 50rem;
 }
+
+.image {
+    height: 20rem;
+    width: 20rem;
+    margin: 15rem 0 0 20rem;
+    border-radius: 50%;
+    background-image: url('../../assets/images/HernandezElvis.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
