@@ -1,8 +1,8 @@
 
 
 .body {
-    padding-top: 5rem;
-    position: relative;
+    /* padding-top: 4rem; */
+    /* position: relative; */
     left: 80px;
     height: 50rem;
     text-align: center;
@@ -15,16 +15,18 @@
 }
 
 .skillsIntro {
-    height: 30rem;
-    background: #228B22;
+    height: 40rem;
+    background: #1f6b1f;
 }
 
 .skills {
     display: inline-block;
     position: relative;
     bottom: 10rem;
+    left: 80px;
+    border: 1px solid whitesmoke;
     border-radius: 10px;
-    background: red;
+    background: #1e1d1d;
     height: 40rem;
-    width: 30rem;
+    width: 50rem;
 }
