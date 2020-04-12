@@ -1,6 +1,6 @@
 import React from 'react'
 import { Nav } from './components'
-import { Home, About, Projects } from './pages'
+import { Home, About, Projects, Skills } from './pages'
 import ResponsiveDrawer from './components/Nav/Nav'
 
 function App() {
@@ -11,8 +11,9 @@ function App() {
  
       <main>
         <Home />
-        {/* <Projects />
-        <About /> */}
+        <Skills />
+        <Projects />
+        <About />
       </main>
     </>
   );
