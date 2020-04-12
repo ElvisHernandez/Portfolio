@@ -21,6 +21,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';
 import styles from './Nav.module.css'
+import { javascriptPNG } from '../../assets'
 
 const drawerWidth = "160px";
 
@@ -134,6 +135,7 @@ function ResponsiveDrawer(props) {
           </a>
         ))}
       </List>
+      <img className={styles.javascript} src={javascriptPNG} alt=""/>
     </div>
   );
 
