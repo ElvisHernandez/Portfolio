@@ -11,3 +11,10 @@ is usually the foundation for a web application's data. Care must be taken so th
 is effectively and efficiently transmitted to the front-end of the application.`
 
 export const backEndSkills = ['Node','Express','PostgreSQL','Ruby on Rails']
+
+export const generalDescription = `The thing I enjoy about programming the most is that
+you aren't limited to just knowing or learning about one thing. There's a whole mountain of
+knowledge out there and I enjoy the climb up.`
+
+export const generalSkills = ['Linux','Ruby','Python','Git/Github','Command Line','Agile Methodology',
+'Test Driven Development','Heroku Deployment','Netlify Deployment']

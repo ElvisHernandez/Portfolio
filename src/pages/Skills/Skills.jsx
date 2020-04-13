@@ -3,7 +3,8 @@ import styles from './Skills.module.css'
 import { 
     nodePNG, nodeJS, 
     javascriptPNG, elvis, 
-    reactPNG, nodeServer } 
+    reactPNG, nodeServer,
+    programmingPNG } 
 from '../../assets'
 import { SkillsCard } from '../../components'
 import * as SkillsConstants from '../../CONSTANTS/SkillsConstants'
@@ -16,13 +17,19 @@ const Skills = () => {
             {/* <div className={styles.image}></div> */} 
             <h1 className={styles.heading}>Skills</h1>
             <div className={styles.skillcards}>
-                <SkillsCard className={styles.cards} 
+                <SkillsCard 
                     imgURL={reactPNG} 
                     title="Front-End Skills" 
                     description={SkillsConstants.frontEndDescription}
                     skillsList={SkillsConstants.frontEndSkills} 
                 />
-                <SkillsCard className={styles.cards} 
+                <SkillsCard 
+                    imgURL={programmingPNG}
+                    title="General Skills"
+                    description={SkillsConstants.generalDescription}
+                    skillsList={SkillsConstants.generalSkills}
+                />
+                <SkillsCard 
                     imgURL={nodeJS}
                     title="Back-End Skills"
                     description={SkillsConstants.backEndDescription}

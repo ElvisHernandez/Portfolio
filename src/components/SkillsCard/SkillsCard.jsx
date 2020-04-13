@@ -35,24 +35,34 @@ const useStyles = makeStyles({
     }
   });
 
-//   const GlobalCSS = withStyles({
-//     "@global" : {
-//       "@media (max-width: 600px)": {
-//         ".makeStyles-cardArea-161": {
-//           marginBottom: '2rem'
-//         }
-//       }
+  const GlobalCSS = withStyles({
+    "@global" : {
+      "#front-end-card": {
+        background: 'red'
+      },
+      "@media (max-width: 600px)": {
+        ".makeStyles-cardArea-161": {
+          marginBottom: '2rem'
+        }
+      },
+      "#Front-End": {
+        paddingTop: '5rem'
+      },
+      "#Back-End": {
+        paddingTop: '3rem'
+      }
         
-//     }
-// })(() => null)
+    }
+})(() => null)
 
 const SkillsCard = ({ imgURL,title,description,skillsList }) => {
     const classes = useStyles();
+    const cardTitle = title.split(' ')[0]
   
     return (
       
       <Card className={classes.root}>
-        {/* <GlobalCSS /> */}
+        <GlobalCSS />
 
         <CardActionArea className={classes.cardArea}>
           <CardMedia
@@ -62,12 +72,13 @@ const SkillsCard = ({ imgURL,title,description,skillsList }) => {
           />
           <CardContent>
             <Typography className={classes.headings} gutterBottom variant="h5" component="h2">
-              {title.split(' ')[0]}
+              {cardTitle}
             </Typography>
             <Typography variant="body2" color="textPrimary" component="p">
                 {description}
             </Typography>
-            <Typography className={`${classes.frontendSkills} ${classes.headings}`} 
+            <Typography id={cardTitle} 
+            className={`${classes.frontendSkills} ${classes.headings}`} 
             gutterBottom variant="h5" component="h2">
               Skills
             </Typography>
