@@ -53,22 +53,24 @@
     justify-content: space-around
 }
 
+@media (max-width: 900px) {
+    .skillcards {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 125rem
+    }
+}
+
 @media (max-width: 600px) {
     .skillcards {
         display: flex;
-        /* position: relative; */
-        /* justify-content: center; */
         flex-direction: column;
-
         height: 125rem
     }
 
     .heading {
-        /* position: relative; */
         left: 0;
     }
-
-    /* .cards {
-        margin-bottom: 2rem !important;
-    } */
 }
+
