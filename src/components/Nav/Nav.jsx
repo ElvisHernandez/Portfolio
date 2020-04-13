@@ -93,7 +93,8 @@ const GlobalCSS = withStyles({
         },
         "@media (max-width: 600px)": {
           ".makeStyles-appBar-3" : {
-            visibility: 'visible'
+            visibility: 'visible',
+            background: '#1e1d1d'
           }
         }
     }

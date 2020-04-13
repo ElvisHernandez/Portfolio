@@ -63,6 +63,11 @@
         height: 125rem
     }
 
+    .heading {
+        /* position: relative; */
+        left: 0;
+    }
+
     /* .cards {
         margin-bottom: 2rem !important;
     } */
