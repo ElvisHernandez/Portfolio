@@ -76,7 +76,7 @@ const GlobalCSS = withStyles({
         },
         ".MuiToolbar-gutters": {
           background: '#1e1d1d',
-          // visibility: 'hidden'
+          visibility: 'hidden'
         }, 
         "#httpIcon": {
           transform: 'scale(4)',
@@ -90,11 +90,18 @@ const GlobalCSS = withStyles({
         },
         ".makeStyles-appBar-3" : {
           visibility: 'hidden'
+        }, 
+        ".jss3": {
+          visibility: 'hidden'
         },
         "@media (max-width: 600px)": {
           ".makeStyles-appBar-3" : {
             visibility: 'visible',
             background: '#1e1d1d'
+          },
+          ".MuiToolbar-gutters": {
+            background: '#1e1d1d',
+            visibility: 'visible'
           }
         }
     }
