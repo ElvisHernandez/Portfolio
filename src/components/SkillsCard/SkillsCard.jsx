@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
@@ -35,11 +35,25 @@ const useStyles = makeStyles({
     }
   });
 
+//   const GlobalCSS = withStyles({
+//     "@global" : {
+//       "@media (max-width: 600px)": {
+//         ".makeStyles-cardArea-161": {
+//           marginBottom: '2rem'
+//         }
+//       }
+        
+//     }
+// })(() => null)
+
 const SkillsCard = ({ imgURL,title,description,skillsList }) => {
     const classes = useStyles();
   
     return (
+      
       <Card className={classes.root}>
+        {/* <GlobalCSS /> */}
+
         <CardActionArea className={classes.cardArea}>
           <CardMedia
             className={classes.media}

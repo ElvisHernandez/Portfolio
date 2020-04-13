@@ -56,10 +56,14 @@
 @media (max-width: 600px) {
     .skillcards {
         display: flex;
+        /* position: relative; */
+        /* justify-content: center; */
         flex-direction: column;
+
+        height: 70rem
     }
 
-    .cards {
+    /* .cards {
         margin-bottom: 2rem !important;
-    }
+    } */
 }
