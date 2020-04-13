@@ -11,12 +11,13 @@ const useStyles = makeStyles({
       border: '2px solid green',
       borderRadius: '15px',
       maxWidth: 345,
-      marginLeft: '20rem'
+      // marginLeft: '20rem'
     },
     media: {
       display: 'inline-block',
+      marginTop: '1rem',
       height: '10rem',
-      width: '10rem'
+      width: '12rem'
     },
     cardArea: {
         textAlign: 'center'
@@ -34,7 +35,7 @@ const useStyles = makeStyles({
     }
   });
 
-const SkillsCard = ({ imgURL,title,description,frontEndSkills }) => {
+const SkillsCard = ({ imgURL,title,description,skillsList }) => {
     const classes = useStyles();
   
     return (
@@ -58,7 +59,7 @@ const SkillsCard = ({ imgURL,title,description,frontEndSkills }) => {
             </Typography>
             <Typography variant="body1" color="textPrimary" component="p">
               <ul className={classes.skills}>
-                {frontEndSkills.map( skill => (
+                {skillsList.map( skill => (
                   <li>{skill}</li>
                 ))}
               </ul> 

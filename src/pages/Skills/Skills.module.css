@@ -45,3 +45,21 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.skillcards {
+    display: flex;
+    position: relative;
+    left: 80px;
+    justify-content: space-around
+}
+
+@media (max-width: 600px) {
+    .skillcards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cards {
+        margin-bottom: 2rem !important;
+    }
+}

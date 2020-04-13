@@ -1,6 +1,10 @@
 import React from 'react';
 import styles from './Skills.module.css'
-import { nodePNG, programmingPNG, javascriptPNG, elvis, reactPNG } from '../../assets'
+import { 
+    nodePNG, nodeJS, 
+    javascriptPNG, elvis, 
+    reactPNG, nodeServer } 
+from '../../assets'
 import { SkillsCard } from '../../components'
 import * as SkillsConstants from '../../CONSTANTS/SkillsConstants'
 
@@ -11,11 +15,20 @@ const Skills = () => {
             {/* <img style={{borderRadius:'50%', height:'auto', width: 'auto'}} src={elvis} alt=""/> */}
             {/* <div className={styles.image}></div> */} 
             <h1 className={styles.heading}>Skills</h1>
-            <SkillsCard imgURL={reactPNG} 
-                title="Front-End Skills" 
-                description={SkillsConstants.frontEndDescription}
-                frontEndSkills={SkillsConstants.frontEndSkills} 
-            />
+            <div className={styles.skillcards}>
+                <SkillsCard className={styles.cards} 
+                    imgURL={reactPNG} 
+                    title="Front-End Skills" 
+                    description={SkillsConstants.frontEndDescription}
+                    skillsList={SkillsConstants.frontEndSkills} 
+                />
+                <SkillsCard className={styles.cards} 
+                    imgURL={nodeJS}
+                    title="Back-End Skills"
+                    description={SkillsConstants.backEndDescription}
+                    skillsList={SkillsConstants.backEndSkills}
+                />
+            </div>
 
             {/* <SkillsCard /> */}
             <div className={styles.skillsIntro}>Blah</div>
