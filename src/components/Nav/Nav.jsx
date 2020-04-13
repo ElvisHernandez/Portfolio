@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
-  },
+  }
 }));
 
 const GlobalCSS = withStyles({
@@ -76,6 +76,7 @@ const GlobalCSS = withStyles({
         },
         ".MuiToolbar-gutters": {
           background: '#1e1d1d',
+          // visibility: 'hidden'
         }, 
         "#httpIcon": {
           transform: 'scale(4)',
@@ -86,6 +87,14 @@ const GlobalCSS = withStyles({
         },
         "#externalLinks": {
           marginTop: '3rem'
+        },
+        ".makeStyles-appBar-3" : {
+          visibility: 'hidden'
+        },
+        "@media (max-width: 600px)": {
+          ".makeStyles-appBar-3" : {
+            visibility: 'visible'
+          }
         }
     }
 })(() => null)
@@ -112,7 +121,7 @@ function ResponsiveDrawer(props) {
   const drawer = (
     <div className={styles.drawer}>
       <HttpIcon id="httpIcon"/>
-      <div className={classes.toolbar} />
+      {/* <div className={classes.toolbar} />   uncomment this line if you have a problem with the navbar */}
       <Divider />
       <List id="drawerList">
         {['Home', 'Skills', 'Projects', 'About'].map((text, index) => (

@@ -9,9 +9,10 @@
     /* margin: 0; */
     position: relative;
     left: 160px;
-    top: 50px;
+    /* top: 50px; */
     width: calc(100vw - 160px);
-    height: calc(100vh - 50px);
+    /* height: calc(100vh - 50px); */
+    height: 100vh;
     border-radius: 10px;
     background: black;
     background-image: url(../../assets/images/ReactCodeOpac.png);
@@ -39,7 +40,10 @@
 
 @media (max-width: 600px) {
     .particlesJs {
+        position: relative;
+        top: 50px;
         left:0;
+        height: calc(100vh - 50px);
         width: 100vw;
     }
 

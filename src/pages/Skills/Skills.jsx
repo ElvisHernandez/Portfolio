@@ -16,6 +16,8 @@ const Skills = () => {
                 description={SkillsConstants.frontEndDescription}
                 frontEndSkills={SkillsConstants.frontEndSkills} 
             />
+
+            {/* <SkillsCard /> */}
             <div className={styles.skillsIntro}>Blah</div>
             <div className={styles.skills}></div>
         </div>

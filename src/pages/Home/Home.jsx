@@ -44,7 +44,10 @@ const Home = () => {
 
     return (
         <>                
-            <section id='particles-js' className={styles.particlesJs}><span className={styles.intro}>Full-Stack <span className={styles.name}>Web Developer</span> <br/> and Problem Solver</span></section>
+            <section id='particles-js' className={styles.particlesJs}>
+                <span className={styles.intro}>Full-Stack <span className={styles.name}>
+                Web Developer</span> <br/> and Problem Solver</span>
+            </section>
         </>
     );
 }
