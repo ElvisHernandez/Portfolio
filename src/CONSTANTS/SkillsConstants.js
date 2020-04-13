@@ -28,14 +28,14 @@ export const skillsJSON = [
     },
     {
         'URL': programmingPNG,
-        'title': 'Back-End Skills',
-        'description': backEndDescription,
-        'skills': backEndSkills
+        'title': 'General Skills',
+        'description':generalDescription,
+        'skills': generalSkills 
     },
     {
         'URL': nodeJS,
-        'title': 'General Skills',
-        'description': generalDescription,
-        'skills': generalSkills  
+        'title': 'Back-End Skills',
+        'description':  backEndDescription,
+        'skills': backEndSkills  
     }
 ]
