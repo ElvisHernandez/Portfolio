@@ -1,17 +1,12 @@
 
 
 .body {
-    /* padding-top: 4rem; */
-    /* position: relative; */
-    left: 80px;
-    height: 50rem;
     text-align: center;
 }
 
 .heading {
-    position: relative;
     margin: 10rem 0 5rem 0;
-    left: 80px;
+    padding-left: 160px;
     color: whitesmoke;
 }
 
@@ -48,8 +43,10 @@
 
 .skillcards {
     display: flex;
-    position: relative;
-    left: 80px;
+    position: absolute;
+    /* left: 80px; */
+    right: 0;
+    width: calc(100% - 160px);
     justify-content: space-around
 }
 
