@@ -1,4 +1,4 @@
-
+import { reactPNG, programmingPNG, nodeJS } from '../assets'
 
 export const frontEndDescription = `My favorite part about the 
 front-end is being able to start with a blank canvas and 
@@ -18,3 +18,24 @@ knowledge out there and I enjoy the climb up.`
 
 export const generalSkills = ['Linux','Ruby','Python','Git/Github','Command Line','Agile Methodology',
 'Test Driven Development','Heroku Deployment','Netlify Deployment']
+
+export const skillsJSON = [
+    {
+        'URL': reactPNG,
+        'title': 'Front-End Skills',
+        'description':frontEndDescription,
+        'skills': frontEndSkills   
+    },
+    {
+        'URL': programmingPNG,
+        'title': 'Back-End Skills',
+        'description': backEndDescription,
+        'skills': backEndSkills
+    },
+    {
+        'URL': nodeJS,
+        'title': 'General Skills',
+        'description': generalDescription,
+        'skills': generalSkills  
+    }
+]
