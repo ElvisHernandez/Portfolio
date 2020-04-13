@@ -1,0 +1,7 @@
+export { default as nodePNG } from './images/node.png'
+export { default as programmingPNG } from './images/programming.png'
+export { default as javascriptPNG } from './images/javascript.png'
+export { default as elvis } from './images/HernandezElvis.jpg'
+export { default as reactPNG } from './images/react.png'
+export { default as nodeServer } from './images/nodeServer.png'
+export { default as nodeJS } from './images/nodeJS.png'

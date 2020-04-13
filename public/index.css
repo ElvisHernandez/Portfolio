@@ -3,8 +3,11 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     margin: 0;
+    background: #1e1d1d;
+    /* height: 100%;
+    width: 100% */
 }
 
 main {
@@ -12,5 +15,13 @@ main {
     /* flex-direction: column;  */
     /* background: rgb(14, 13, 13); */
     /* align-items: center; */
-    text-align: center;
+    /* text-align: center; */
+    background: #1e1d1d;
+    height: 100%;
 }
+
+#root {
+    background: #1e1d1d;
+    height: 100%;
+}
+
