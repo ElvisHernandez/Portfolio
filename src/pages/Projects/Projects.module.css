@@ -36,6 +36,7 @@
     border-radius: 15px;
     background: whitesmoke;
     border: 2px solid green;    
+    transition: 1s;
 }
 
 .project1 {
@@ -47,11 +48,20 @@
 .project2 {
     background-image: url('../../assets/images/AirAware.png');
     background-repeat: no-repeat;
-    background-size: 30rem 25rem;
+    background-size: 30rem 20rem;
 }
 
 .project:hover {
-    /* background-color: black; */
-    background-image: url('../../assets/images/react.png');
+    background-color: #1e1d1d;
+    background-image: none;
+    /* background-image: url('../../assets/images/react.png'); */
     border: 10px solid red;
+}
+
+.project:hover .projectButton {
+    display: inline;
+}
+
+.projectButton {
+    display: none;
 }
