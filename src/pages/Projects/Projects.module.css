@@ -17,18 +17,6 @@
     width: 100vw
 }
 
-/* .projects {
-    display: inline-block;
-    position: relative;
-    bottom: 10rem;
-    left: 80px;
-    border: 2px solid green;
-    border-radius: 10px;
-    background: whitesmoke;
-    height: 40rem;
-    width: 50rem;
-} */
-
 .projects {
     display: flex;
     flex-direction: row;
@@ -44,18 +32,26 @@
     position: relative;
     bottom: 10rem;
     height: 20rem;
-    width: auto;
-    /* transform: scale(0.3); */
+    width: 30rem;
     border-radius: 15px;
     background: whitesmoke;
+    border: 2px solid green;    
 }
 
-/* .project1 {
+.project1 {
     background-image: url('../../assets/images/SoftSearch.png');
-    background-size: contain;
     background-repeat: no-repeat;
+    background-size: 30rem 20rem;
 }
 
 .project2 {
     background-image: url('../../assets/images/AirAware.png');
-} */
+    background-repeat: no-repeat;
+    background-size: 30rem 25rem;
+}
+
+.project:hover {
+    /* background-color: black; */
+    background-image: url('../../assets/images/react.png');
+    border: 10px solid red;
+}
