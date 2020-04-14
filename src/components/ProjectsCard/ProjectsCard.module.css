@@ -1,8 +1,11 @@
 
 
 .projectContainer {
-    /* display: flex;
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    /* flex-direction: row;
     justify-content: center;
     align-items: flex-end; */
     /* padding-bottom: 10rem; */
@@ -19,26 +22,29 @@
     background-size: 30rem 20rem;
 }
 
-.buttons {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.project1Text {
+    display: none    
 }
 
-.project:hover {
+
+.projectContainer:hover {
+    color: whitesmoke;
     background-color: #1e1d1d;
     background-image: none;
     /* background-image: url('../../assets/images/react.png'); */
 }
 
-.project:hover .projectButton,
-.project:hover .codeButton {
+.projectContainer:hover button,
+.projectContainer:hover p  {
+    font-weight: bold;
     display: inline;
 }
 
-.project1Text {
-    display: inline-block;
+a { 
+    text-decoration: none;
+    color: whitesmoke
+}
+button:hover a {
+    color: #228B22
 }
 

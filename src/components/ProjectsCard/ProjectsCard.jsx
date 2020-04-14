@@ -6,14 +6,12 @@ import styles from './ProjectsCard.module.css'
 const GlobalCSS = withStyles({
     "@global": {
         ".MuiButton-root": {
-            // display: 'none',
+            display: 'none',
             background: '#228B22',
             color: 'whitesmoke',
-            marginBottom: '3rem',
         },
         ".MuiButton-root:hover": {
             background: 'whitesmoke',
-            color: '#228B22',
         }
     }
 })(() => null)
@@ -24,10 +22,18 @@ const ProjectsCard = () => {
         <div className={styles.projectContainer}>
             <GlobalCSS />
             <p className={styles.project1Text}>Soft Search is a career search web 
-            application specifically created for Software Development.</p>
-            <div className={styles.buttons}>
-                <Button className={styles.projectButton}>View Project</Button>
-                <Button className={styles.codeButton}>View Code</Button>
+            application <br /> specifically created for Software Development.</p>
+            <div>
+                <Button>
+                    <a href="https://s0ft-search.herokuapp.com/" target="_blank">
+                        View Project
+                    </a>
+                </Button>
+                <Button>
+                    <a href="https://github.com/ElvisHernandez/SoftSearch" target="_blank">
+                        View Code
+                    </a>
+                </Button>
             </div>
         </div>
     );
