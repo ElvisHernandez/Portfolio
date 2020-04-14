@@ -1,0 +1,44 @@
+
+
+.projectContainer {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end; */
+    /* padding-bottom: 10rem; */
+    position: relative;
+    bottom: 10rem;
+    height: 20rem;
+    width: 30rem;
+    border-radius: 15px;
+    background: whitesmoke;
+    border: 2px solid green;    
+    transition: 1s;
+    background-image: url('../../assets/images/SoftSearch.png');
+    background-repeat: no-repeat;
+    background-size: 30rem 20rem;
+}
+
+.buttons {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project:hover {
+    background-color: #1e1d1d;
+    background-image: none;
+    /* background-image: url('../../assets/images/react.png'); */
+}
+
+.project:hover .projectButton,
+.project:hover .codeButton {
+    display: inline;
+}
+
+.project1Text {
+    display: inline-block;
+}
+
