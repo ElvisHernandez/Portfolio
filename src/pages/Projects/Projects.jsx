@@ -3,10 +3,13 @@ import styles from './Projects.module.css'
 
 const Projects = () => {
     return (
-        <div className={styles.projects}>
-            <h1 className={styles.text}>Projects</h1>
-            <div className={styles.skillsIntro}><h1>Projects</h1></div>
-            <div className={styles.skills}></div>
+        <div className={styles.projectsContainer}>
+            <div className={styles.projectsIntro}><h1>Projects</h1></div>
+            {/* <div className={styles.projects}></div> */}
+            <div className={styles.projects}>
+                <span className={styles.project1}>Project 1</span>
+                <span className={styles.project2}>Project 2</span>
+            </div>
         </div>
     );
 }

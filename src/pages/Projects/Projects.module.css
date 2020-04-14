@@ -1,33 +1,49 @@
 
 
-.projects {
+.projectsContainer {
     text-align: center;
-    padding-top: 5rem;
+    padding-top: 10rem;
 }
 
-.text {
-    color: red;
-    /* margin-top: 60rem; */
-}
-
-.skillsIntro {
+.projectsIntro {
     height: 30rem;
     color: whitesmoke;
     /* margin-top: 3.1rem; */
     margin-top: 40rem;
+    padding-top: 3rem;
+    padding-left: 140px;
     border-radius: 10px;
     background: #1f6b1f;
     width: 100vw
 }
 
-.skills {
+/* .projects {
     display: inline-block;
     position: relative;
     bottom: 10rem;
     left: 80px;
-    border: 1px solid green;
+    border: 2px solid green;
     border-radius: 10px;
     background: whitesmoke;
     height: 40rem;
     width: 50rem;
+} */
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 160px;
+    /* padding-bottom: 10rem; */
+}
+
+.project1, .project2 {
+    /* display: inline-block; */
+    /* padding-bottom: 10rem; */
+    position: relative;
+    bottom: 10rem;
+    height: 30rem;
+    width: 30rem;
+    border-radius: 15px;
+    background: whitesmoke;
 }
