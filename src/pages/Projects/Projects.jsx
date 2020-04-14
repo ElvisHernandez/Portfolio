@@ -7,7 +7,14 @@ import { withStyles } from '@material-ui/core/styles'
 const GlobalCSS = withStyles({
     "@global": {
         ".MuiButton-root": {
-            background: 'green'
+            display: 'none',
+            background: '#228B22',
+            color: 'whitesmoke',
+            marginBottom: '1rem'
+        },
+        ".MuiButton-root:hover": {
+            background: 'whitesmoke',
+            color: '#228B22',
         }
     }
 })(() => null)

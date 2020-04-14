@@ -58,14 +58,14 @@
     background-color: #1e1d1d;
     background-image: none;
     /* background-image: url('../../assets/images/react.png'); */
-    border: 10px solid red;
 }
 
-/* .project:hover .projectButton {
+.project:hover .projectButton,
+.project:hover .codeButton {
     display: inline;
 }
 
-.projectButton {
+/* .projectButton {
     display: none;
     width: 10rem;
 }
