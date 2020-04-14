@@ -61,15 +61,15 @@
     border: 10px solid red;
 }
 
-.project:hover .projectButton {
+/* .project:hover .projectButton {
     display: inline;
 }
 
 .projectButton {
-    /* display: none; */
+    display: none;
     width: 10rem;
 }
 
 .codeButton {
     width: 10rem;
-}
+} */

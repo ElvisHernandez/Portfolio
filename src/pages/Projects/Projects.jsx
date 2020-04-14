@@ -6,13 +6,16 @@ import { withStyles } from '@material-ui/core/styles'
 
 const GlobalCSS = withStyles({
     "@global": {
-        
+        ".MuiButton-root": {
+            background: 'green'
+        }
     }
-})
+})(() => null)
 
 const Projects = () => {
     return (
         <div className={styles.projectsContainer}>
+            <GlobalCSS />
             <div className={styles.projectsIntro}><h1>Projects</h1> <Button style={{paddingLeft: '20rem'}}/></div>
             <div className={styles.projects}>
                 <span className={`${styles.project} ${styles.project1}`}>
