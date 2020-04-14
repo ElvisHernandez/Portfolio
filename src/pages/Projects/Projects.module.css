@@ -27,7 +27,10 @@
 }
 
 .project {
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
     /* padding-bottom: 10rem; */
     position: relative;
     bottom: 10rem;
@@ -63,5 +66,10 @@
 }
 
 .projectButton {
-    display: none;
+    /* display: none; */
+    width: 10rem;
+}
+
+.codeButton {
+    width: 10rem;
 }
