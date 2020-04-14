@@ -3,7 +3,11 @@ import styles from './Projects.module.css'
 
 const Projects = () => {
     return (
-        <h1 className={styles.text} >Projects</h1>
+        <div className={styles.projects}>
+            <h1 className={styles.text}>Projects</h1>
+            <div className={styles.skillsIntro}><h1>Projects</h1></div>
+            <div className={styles.skills}></div>
+        </div>
     );
 }
  
