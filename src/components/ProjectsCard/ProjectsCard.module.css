@@ -3,35 +3,31 @@
 .projectContainer {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     justify-content: center;
-    /* flex-direction: row;
-    justify-content: center;
-    align-items: flex-end; */
-    /* padding-bottom: 10rem; */
+    align-items: center;
     position: relative;
     bottom: 10rem;
     height: 20rem;
     width: 30rem;
     border-radius: 15px;
-    background: whitesmoke;
     border: 2px solid green;    
-    transition: 1s;
-    background-image: url('../../assets/images/SoftSearch.png');
+    background: whitesmoke;
+    /* background-image: url('../../assets/images/SoftSearch.png'); */
     background-repeat: no-repeat;
     background-size: 30rem 20rem;
+    transition: 1s;
 }
 
-.project1Text {
-    display: none    
+.projectText {
+    display: none;    
+    width: 75%;
 }
 
 
 .projectContainer:hover {
     color: whitesmoke;
     background-color: #1e1d1d;
-    background-image: none;
-    /* background-image: url('../../assets/images/react.png'); */
+    background-image: none !important;
 }
 
 .projectContainer:hover button,

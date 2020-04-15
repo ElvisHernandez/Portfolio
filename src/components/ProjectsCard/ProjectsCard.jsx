@@ -9,6 +9,7 @@ const GlobalCSS = withStyles({
             display: 'none',
             background: '#228B22',
             color: 'whitesmoke',
+            width: '8rem'
         },
         ".MuiButton-root:hover": {
             background: 'whitesmoke',
@@ -17,20 +18,23 @@ const GlobalCSS = withStyles({
 })(() => null)
 
 
-const ProjectsCard = () => {
+const ProjectsCard = ({ image, description, projectLink, codeLink }) => {
+    const backgroundImage = {
+        "backgroundImage": `url(${image})`
+    }
+
     return (
-        <div className={styles.projectContainer}>
+        <div className={styles.projectContainer} style={backgroundImage}>
             <GlobalCSS />
-            <p className={styles.project1Text}>Soft Search is a career search web 
-            application <br /> specifically created for Software Development.</p>
+            <p className={styles.projectText}>{description}</p>
             <div>
                 <Button>
-                    <a href="https://s0ft-search.herokuapp.com/" target="_blank">
+                    <a href={projectLink} target="_blank">
                         View Project
                     </a>
                 </Button>
                 <Button>
-                    <a href="https://github.com/ElvisHernandez/SoftSearch" target="_blank">
+                    <a href={codeLink} target="_blank">
                         View Code
                     </a>
                 </Button>
