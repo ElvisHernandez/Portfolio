@@ -1,16 +1,7 @@
 import React from "react";
 import styles from "./Projects.module.css";
 import { ProjectsCard } from "../../components";
-import {
-  ssImage,
-  ssDescription,
-  ssProjectLink,
-  ssCodeLink,
-  aaImage,
-  aaDescription,
-  aaProjectLink,
-  aaCodeLink,
-} from "../../CONSTANTS/ProjectsConstants";
+import { projectsJSON } from "../../CONSTANTS/ProjectsConstants";
 
 const Projects = () => {
   return (
@@ -19,18 +10,14 @@ const Projects = () => {
         <h1>Projects</h1>
       </div>
       <div className={styles.projects}>
-        <ProjectsCard
-          image={ssImage}
-          description={ssDescription}
-          projectLink={ssProjectLink}
-          codeLink={ssCodeLink}
-        />
-        <ProjectsCard
-          image={aaImage}
-          description={aaDescription}
-          projectLink={aaProjectLink}
-          codeLink={aaCodeLink}
-        />
+        {projectsJSON.map(({ image, description, projectLink, codeLink }) => (
+          <ProjectsCard
+            image={image}
+            description={description}
+            projectLink={projectLink}
+            codeLink={codeLink}
+          />
+        ))}
       </div>
     </div>
   );
