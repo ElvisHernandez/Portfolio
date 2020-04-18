@@ -83,6 +83,12 @@
   display: inline-block;
 }
 
+@media (max-width: 900px) {
+  .projectsCanvas {
+    margin-top: 90rem;
+  }
+}
+
 /* .projectButton {
     display: none;
     width: 10rem;
