@@ -37,3 +37,11 @@ a {
 button:hover a {
   color: #228b22;
 }
+
+@media (max-width: 900px) {
+  .projectContainer {
+    height: 15rem;
+    width: 25rem;
+    background-size: 25rem 15rem;
+  }
+}
