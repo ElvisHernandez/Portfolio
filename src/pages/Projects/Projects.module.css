@@ -1,72 +1,86 @@
-
+.projectsCanvas {
+  text-align: center;
+  padding-top: 10rem;
+}
 
 .projectsContainer {
-    text-align: center;
-    padding-top: 10rem;
+  position: relative;
+  bottom: 15rem;
+}
+
+.technologyText {
+  color: #1e1d1d;
+}
+
+.technologies {
+  color: whitesmoke;
+  list-style-type: none;
+  font-weight: bold;
+  padding: 0;
 }
 
 .projectsIntro {
-    height: 30rem;
-    color: whitesmoke;
-    /* margin-top: 3.1rem; */
-    margin-top: 40rem;
-    padding-top: 3rem;
-    padding-left: 140px;
-    border-radius: 10px;
-    background: #1f6b1f;
-    width: 100vw
+  height: 30rem;
+  color: whitesmoke;
+  /* margin-top: 3.1rem; */
+  margin-top: 40rem;
+  padding-top: 3rem;
+  padding-left: 140px;
+  border-radius: 10px;
+  background: #1f6b1f;
+  width: 100vw;
 }
 
 .projects {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-left: 160px;
-    /* width: 100vw; */
-    /* padding-bottom: 10rem; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-left: 160px;
+  /* width: 100vw; */
+  /* padding-bottom: 10rem; */
 }
 
 .project {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    /* padding-bottom: 10rem; */
-    position: relative;
-    bottom: 10rem;
-    height: 20rem;
-    width: 30rem;
-    border-radius: 15px;
-    background: whitesmoke;
-    border: 2px solid green;    
-    transition: 1s;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  /* padding-bottom: 10rem; */
+  position: relative;
+  bottom: 10rem;
+  height: 20rem;
+  width: 30rem;
+  border-radius: 15px;
+  background: whitesmoke;
+  border: 2px solid green;
+  transition: 1s;
 }
 
 .project1 {
-    background-image: url('../../assets/images/SoftSearch.png');
-    background-repeat: no-repeat;
-    background-size: 30rem 20rem;
+  background-image: url("../../assets/images/SoftSearch.png");
+  background-repeat: no-repeat;
+  background-size: 30rem 20rem;
 }
 
 .project2 {
-    background-image: url('../../assets/images/AirAware.png');
-    background-repeat: no-repeat;
-    background-size: 30rem 20rem;
+  background-image: url("../../assets/images/AirAware.png");
+  background-repeat: no-repeat;
+  background-size: 30rem 20rem;
 }
 
 .project:hover {
-    background-color: #1e1d1d;
-    background-image: none;
-    /* background-image: url('../../assets/images/react.png'); */
+  background-color: #1e1d1d;
+  background-image: none;
+  /* background-image: url('../../assets/images/react.png'); */
 }
 
 .project:hover .projectButton,
 .project:hover .codeButton {
-    display: inline;
+  display: inline;
 }
 
 .project1Text {
-    display: inline-block;
+  display: inline-block;
 }
 
 /* .projectButton {

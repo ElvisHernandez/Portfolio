@@ -3,14 +3,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  bottom: 10rem;
   height: 20rem;
   width: 30rem;
   border-radius: 15px;
   border: 2px solid whitesmoke;
   background: whitesmoke;
-  /* background-image: url('../../assets/images/SoftSearch.png'); */
   background-repeat: no-repeat;
   background-size: 30rem 20rem;
   transition: 1s;
