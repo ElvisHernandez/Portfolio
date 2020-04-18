@@ -19,9 +19,6 @@ const Skills = () => {
                     />  
                 ))}
             </div>
-
-            {/* <div className={styles.skillsIntro}>Blah</div>
-            <div className={styles.skills}></div> */}
         </div>
     );
 }

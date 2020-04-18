@@ -1,0 +1,39 @@
+.projectContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+  width: 30rem;
+  border-radius: 15px;
+  border: 2px solid whitesmoke;
+  background: whitesmoke;
+  background-repeat: no-repeat;
+  background-size: 30rem 20rem;
+  transition: 1s;
+}
+
+.projectText {
+  display: none;
+  width: 75%;
+}
+
+.projectContainer:hover {
+  color: whitesmoke;
+  background-color: #1e1d1d;
+  background-image: none !important;
+}
+
+.projectContainer:hover button,
+.projectContainer:hover p {
+  font-weight: bold;
+  display: inline;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+button:hover a {
+  color: #228b22;
+}

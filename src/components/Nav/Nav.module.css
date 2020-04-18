@@ -13,3 +13,9 @@
     height: 4rem;
     width: 4rem;
 }
+
+@media (max-width: 600px) {
+    .javascript {
+        margin-top: 10rem
+    }
+}
