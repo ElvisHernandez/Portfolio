@@ -3,11 +3,6 @@
   padding-top: 10rem;
 }
 
-.projectsContainer {
-  position: relative;
-  bottom: 20rem;
-}
-
 .technologyText {
   color: #1e1d1d;
 }
@@ -35,7 +30,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding-left: 160px;
+  /* padding-left: 160px; */
   /* width: 100vw; */
   /* padding-bottom: 10rem; */
 }
@@ -81,12 +76,6 @@
 
 .project1Text {
   display: inline-block;
-}
-
-@media (max-width: 900px) {
-  .projectsCanvas {
-    margin-top: 90rem;
-  }
 }
 
 /* .projectButton {
