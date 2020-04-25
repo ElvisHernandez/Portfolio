@@ -6,7 +6,7 @@ import { projectsJSON } from "../../CONSTANTS/ProjectsConstants";
 const Projects = () => {
   return (
     <div className={styles.projectsCanvas}>
-      <div className={styles.projectsIntro}>
+      <div id="projects-section" className={styles.projectsIntro}>
         <h1>Projects</h1>
         <div className={styles.projects}>
           {projectsJSON.map(

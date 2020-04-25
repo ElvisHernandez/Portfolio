@@ -1,0 +1,48 @@
+.aboutSection {
+  position: relative;
+  /* margin-left: 30rem; */
+  left: 150px;
+  top: 10rem;
+  width: calc(100% - 160px);
+  text-align: center;
+  color: whitesmoke;
+}
+
+.aboutMeIntro {
+}
+
+.aboutMe {
+  display: flex;
+  flex-direction: row;
+  margin: 10rem 0 0 10rem;
+}
+
+.image {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  background-image: url("../../assets/images/HernandezElvis.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.description {
+  margin-left: 15rem;
+  padding: 0 2rem 0 2rem;
+  width: 50rem;
+  height: 20rem;
+  color: #1e1d1d;
+  font-size: 1.3rem;
+  background: whitesmoke;
+  border: 2px solid #228b22;
+  border-radius: 10px;
+}
+
+.name {
+  color: #228b22;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 0.9rem;
+}
