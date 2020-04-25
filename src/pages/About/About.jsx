@@ -6,7 +6,10 @@ const About = () => {
     <div className={styles.aboutSection}>
       <h1 className={styles.aboutMeIntro}>About Me</h1>
 
-      <div className={styles.image}></div>
+      <section className={styles.aboutMe}>
+        <div className={styles.image}></div>
+        <div className={styles.description}></div>
+      </section>
     </div>
   );
 };
