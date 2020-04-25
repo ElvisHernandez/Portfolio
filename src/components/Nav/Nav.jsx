@@ -111,7 +111,7 @@ const iconHash = {
   0: [<HomeIcon />, "#particles-js"],
   1: [<CodeIcon />, "#skills-section"],
   2: [<PermMediaIcon />, "#projects-section"],
-  3: [<FaceIcon />, "#"],
+  3: [<FaceIcon />, "#about-section"],
   4: [
     <LinkedInIcon />,
     "https://www.linkedin.com/in/elvis-hernandez-9669a618a/",

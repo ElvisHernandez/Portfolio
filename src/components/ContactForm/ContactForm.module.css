@@ -2,7 +2,18 @@ input {
   border-radius: 5px;
 }
 
+.contactSection {
+  margin-top: 10rem;
+}
+
+.contact {
+  margin-bottom: 4rem;
+}
+
+.name,
+.email,
 .textArea {
+  width: 30rem;
 }
 
 .name:focus,
