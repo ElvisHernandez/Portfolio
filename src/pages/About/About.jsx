@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./About.module.css";
+import { ContactForm } from "../../components";
 
 const About = () => {
   return (
@@ -24,6 +25,7 @@ const About = () => {
           </span>
         </div>
       </section>
+      <ContactForm />
     </div>
   );
 };
