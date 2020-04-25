@@ -1,0 +1,22 @@
+.aboutSection {
+  position: relative;
+  /* margin-left: 30rem; */
+  left: 150px;
+  top: 10rem;
+  width: calc(100% - 160px);
+  text-align: center;
+  color: whitesmoke;
+}
+
+.aboutMeIntro {
+}
+
+.image {
+  height: 20rem;
+  width: 20rem;
+  margin: 15rem 0 0 20rem;
+  border-radius: 50%;
+  background-image: url("../../assets/images/HernandezElvis.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
