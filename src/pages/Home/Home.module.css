@@ -1,57 +1,63 @@
-
 .particlesJs {
-    display: flex;
-    align-items: center;
-    /* align-content: center; */
-    justify-content: center;
-    
-    text-align: center;
-    /* margin: 0; */
-    position: relative;
-    left: 160px;
-    /* top: 50px; */
-    width: calc(100% - 160px);
-    /* height: calc(100vh - 50px); */
-    height: 100vh;
-    border-radius: 10px;
-    background: black;
-    background-image: url(../../assets/images/ReactCodeOpac.png);
-    border-bottom:1px solid #1f6b1f;
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
+  display: flex;
+  align-items: center;
+  /* align-content: center; */
+  justify-content: center;
+
+  text-align: center;
+  /* margin: 0; */
+  position: relative;
+  left: 160px;
+  /* top: 50px; */
+  width: calc(100% - 160px);
+  /* height: calc(100vh - 50px); */
+  height: 100vh;
+  border-radius: 10px;
+  background: black;
+  background-image: url(../../assets/images/ReactCodeOpac.png);
+  border-bottom: 1px solid #1f6b1f;
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
 }
 
 .intro {
-    /* display: inline-block; */
-    position: absolute;
-    /* left: 80%/2; */
-    font-size: 3rem;
-    color: whitesmoke;
-    /* position: relative; */
-    /* align-content: center; */
-    /* text-align: center; */
+  /* display: inline-block; */
+  position: absolute;
+  /* left: 80%/2; */
+  font-size: 3rem;
+  color: whitesmoke;
+  /* position: relative; */
+  /* align-content: center; */
+  /* text-align: center; */
+}
+
+.resume:hover {
+  background: #228b22;
 }
 
 @media (max-width: 900px) {
-    .intro {
-        font-size: 2rem;
-    }
+  .intro {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 600px) {
-    .particlesJs {
-        position: relative;
-        top: 50px;
-        left:0;
-        height: calc(100vh - 50px);
-        width: 100vw;
-    }
+  .particlesJs {
+    position: relative;
+    top: 50px;
+    left: 0;
+    height: calc(100vh - 50px);
+    width: 100vw;
+  }
 
-    .intro {
-        font-size: 1.5rem;
-    }
+  .intro {
+    font-size: 1.5rem;
+  }
+  .resume {
+    margin-top: 1rem;
+  }
 }
 
 .name {
-    color:#00FFFF;
+  color: #00ffff;
 }
