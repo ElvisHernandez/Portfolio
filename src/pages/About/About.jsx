@@ -9,7 +9,7 @@ const About = () => {
 
       <section className={styles.aboutMe}>
         <div className={styles.image}></div>
-        <div className={styles.description}>
+        <div className={`${styles.description} container`}>
           {" "}
           <br />
           Hi there, my name is <span className={styles.name}>Elvis</span>.{" "}
