@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import styles from "./Home.module.css";
+import { resume } from "../../assets";
 
 const Home = () => {
   useEffect(() => {
@@ -45,7 +46,15 @@ const Home = () => {
       <section id="particles-js" className={styles.particlesJs}>
         <span className={styles.intro}>
           Full-Stack <span className={styles.name}>Web Developer</span> <br />{" "}
-          and Problem Solver
+          and Problem Solver <br />
+          <a href={resume} download>
+            <button
+              type="button"
+              className={`btn btn-outline-success ${styles.resume}`}
+            >
+              Download Resume
+            </button>
+          </a>
         </span>
       </section>
     </>
