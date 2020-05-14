@@ -8,3 +8,4 @@ export { default as nodeJS } from "./images/nodeJS.png";
 export { default as airAware } from "./images/AirAware.png";
 export { default as softSearch } from "./images/SoftSearch.png";
 export { default as resume } from "./Resume/ElvisResume.pdf";
+export { default as algoVisualizer } from "./images/AlgoVisualizer.png";

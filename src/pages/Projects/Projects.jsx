@@ -10,7 +10,10 @@ const Projects = () => {
         <h1>Projects</h1>
         <div className={styles.projects}>
           {projectsJSON.map(
-            ({ image, description, projectLink, codeLink, technologies }) => (
+            (
+              { image, description, projectLink, codeLink, technologies },
+              index
+            ) => (
               <div className={styles.projectsContainer}>
                 <h2 className={styles.technologyText}>Technologies Used:</h2>
                 <ul className={styles.technologies}>
@@ -27,6 +30,7 @@ const Projects = () => {
               </div>
             )
           )}
+          <br></br>
         </div>
       </div>
     </div>

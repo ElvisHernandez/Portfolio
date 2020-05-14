@@ -11,13 +11,20 @@ const frontEndSkills = [
   "JavaScript",
   "Bootstrap4",
   "Material UI",
+  "React Testing Library",
 ];
 
 const backEndDescription = `The back-end is my favorite part of the stack because it 
 is usually the foundation for a web application's data. Care must be taken so that this data 
 is effectively and efficiently transmitted to the front-end of the application.`;
 
-const backEndSkills = ["Node", "Express", "PostgreSQL", "Ruby on Rails"];
+const backEndSkills = [
+  "Node",
+  "Express",
+  "PostgreSQL",
+  "Ruby on Rails",
+  "Continuous Integration/Deployment via Circleci",
+];
 
 const generalDescription = `The thing I enjoy about programming the most is that
 you aren't limited to just knowing or learning about one thing. There's a whole mountain of
@@ -25,11 +32,13 @@ knowledge out there and I enjoy the climb up.`;
 
 const generalSkills = [
   "Linux",
+  "TypeScript",
   "Ruby",
   "Python",
   "Git/Github",
   "Command Line",
   "Agile Methodology",
+  "JestJS",
   "Test Driven Development",
   "Heroku Deployment",
   "Netlify Deployment",

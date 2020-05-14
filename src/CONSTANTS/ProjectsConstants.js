@@ -1,4 +1,4 @@
-import { airAware, softSearch } from "../assets";
+import { airAware, softSearch, algoVisualizer } from "../assets";
 
 // SoftSearch data
 const ssImage = softSearch;
@@ -32,6 +32,26 @@ const aaTechnologies = [
   "Material UI",
 ];
 
+// AlgoVisualizer data
+const avImage = algoVisualizer;
+const avDescription = `AlgoVisualizer is a visualization tool for 
+displaying the process by which well known sorting algorithms such 
+as mergesort work.`;
+const avProjectLink = "https://algovisualizer.netlify.app/";
+const avCodeLink = "https://github.com/ElvisHernandez/AlgoVisualizer";
+const avTechnologies = [
+  "TypeScript",
+  "JavaScript",
+  "React",
+  "Jest",
+  "React Testing Library",
+  "Bootstrap",
+  "Material UI",
+  "HTML",
+  "CSS",
+  "Conitnuous Integration/Deployment via circleci",
+];
+
 export const projectsJSON = [
   {
     image: ssImage,
@@ -46,5 +66,12 @@ export const projectsJSON = [
     projectLink: aaProjectLink,
     codeLink: aaCodeLink,
     technologies: aaTechnologies,
+  },
+  {
+    image: avImage,
+    description: avDescription,
+    projectLink: avProjectLink,
+    codeLink: avCodeLink,
+    technologies: avTechnologies,
   },
 ];
