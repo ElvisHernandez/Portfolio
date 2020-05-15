@@ -6,8 +6,6 @@ const Home = () => {
   useEffect(() => {
     window.onload = () => {
       const currentViewWidth = window.innerWidth;
-      const widthRange = viewWidthRange(currentViewWidth);
-
       const forceRadius = viewportToForceRadius(currentViewWidth);
       startAnimation(forceRadius);
     };
@@ -27,12 +25,6 @@ const Home = () => {
     if (viewport > 900) return 350;
     else if (viewport > 600) return 250;
     else return 100;
-  }
-
-  function viewWidthRange(width) {
-    if (width > 900) return "lg";
-    else if (width > 600) return "md";
-    else return "sm";
   }
 
   function numberOfParticles(viewportWidth) {

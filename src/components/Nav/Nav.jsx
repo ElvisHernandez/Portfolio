@@ -20,7 +20,7 @@ import FaceIcon from "@material-ui/icons/Face";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import MenuIcon from "@material-ui/icons/Menu";
-import { makeStyles, useTheme, withStyles } from "@material-ui/core/styles";
+import { makeStyles, withStyles } from "@material-ui/core/styles";
 import styles from "./Nav.module.css";
 import { javascriptPNG } from "../../assets";
 
@@ -122,7 +122,6 @@ const iconHash = {
 function ResponsiveDrawer(props) {
   const { container } = props;
   const classes = useStyles();
-  const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {

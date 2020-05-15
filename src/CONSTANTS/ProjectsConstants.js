@@ -53,25 +53,29 @@ const avTechnologies = [
 ];
 
 export const projectsJSON = [
-  {
-    image: ssImage,
-    description: ssDescription,
-    projectLink: ssProjectLink,
-    codeLink: ssCodeLink,
-    technologies: ssTechnologies,
-  },
-  {
-    image: aaImage,
-    description: aaDescription,
-    projectLink: aaProjectLink,
-    codeLink: aaCodeLink,
-    technologies: aaTechnologies,
-  },
-  {
-    image: avImage,
-    description: avDescription,
-    projectLink: avProjectLink,
-    codeLink: avCodeLink,
-    technologies: avTechnologies,
-  },
+  [
+    {
+      image: ssImage,
+      description: ssDescription,
+      projectLink: ssProjectLink,
+      codeLink: ssCodeLink,
+      technologies: ssTechnologies,
+    },
+    {
+      image: aaImage,
+      description: aaDescription,
+      projectLink: aaProjectLink,
+      codeLink: aaCodeLink,
+      technologies: aaTechnologies,
+    },
+  ],
+  [
+    {
+      image: avImage,
+      description: avDescription,
+      projectLink: avProjectLink,
+      codeLink: avCodeLink,
+      technologies: avTechnologies,
+    },
+  ],
 ];
